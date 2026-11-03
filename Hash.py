@@ -62,7 +62,7 @@ def linear_probe_viewREV(key,hash_table):
             pass
     return "not in there"
 
-def linked_List_add(key,hash_table,value):
+def linked_List_addREV(key,hash_table,value):
     hv = Hash2(key)
     id = hv % len(hash_table) 
     if hash_table[id] ==  None:
@@ -74,7 +74,7 @@ def linked_List_add(key,hash_table,value):
         hash_table[id].append([key,value])
         
 
-def linked_List_view(key,hash_table):
+def linked_List_viewREV(key,hash_table):
     hv = Hash2(key)
     id = hv % len(hash_table)
     for i in range(len(hash_table[id])):
@@ -258,6 +258,35 @@ def main():
     stats[0] = 0
     stats[1] = 0
     stats[2] = 0
+
+    for i in range(len(movies)):
+            #print(Hash1(movies[i].title))
+            start = datetime.now()
+            linked_List_addREV(movies[i].title,title_hash_table_ll,movies[i].quote)
+            end = datetime.now()
+    stats[2] = end-start
+    print("Fourth Hash Table")
+    for i in range(len(title_hash_table_ll)):
+        if title_hash_table_ll[i] == None:
+            stats[0] += 1
+    print("title as key")
+    print(f"wasted space = {stats[0]}, collisons = {stats[1]}, time taken = {stats[2]}")
+
+    stats[0] = 0
+    stats[1] = 0
+    stats[2] = 0
+
+    for i in range(len(movies)):
+            #print(Hash1(movies[i].title))
+            start = datetime.now()
+            linked_List_addREV(movies[i].quote,quote_hash_table_ll,movies[i].title)
+            end = datetime.now()
+    stats[2] = end-start
+    for i in range(len(quote_hash_table_ll)):
+        if quote_hash_table_ll[i] == None:
+            stats[0] += 1
+    print("quote as key")
+    print(f"wasted space = {stats[0]}, collisons = {stats[1]}, time taken = {stats[2]}")
 
 
 
