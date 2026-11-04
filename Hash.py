@@ -261,34 +261,34 @@ def main():
     stats[1] = 0
     stats[2] = 0
 
-    # for i in range(len(movies)):
-    #         #print(Hash1(movies[i].title))
-    #         start = datetime.now()
-    #         linked_List_addREV(movies[i].title,title_hash_table_ll,movies[i].quote)
-    #         end = datetime.now()
-    # stats[2] = end-start
-    # print("Fourth Hash Table")
-    # for i in range(len(title_hash_table_ll)):
-    #     if title_hash_table_ll[i] == None:
-    #         stats[0] += 1
-    # print("title as key")
-    # print(f"wasted space = {stats[0]}, collisons = {stats[1]}, time taken = {stats[2]}")
+    for i in range(len(movies)):
+            #print(Hash1(movies[i].title))
+            start = datetime.now()
+            linked_List_addREV(movies[i].title,title_hash_table_ll,movies[i].quote)
+            end = datetime.now()
+    stats[2] = end-start
+    print("Fourth Hash Table")
+    for i in range(len(title_hash_table_ll)):
+        if title_hash_table_ll[i] == None:
+            stats[0] += 1
+    print("title as key")
+    print(f"wasted space = {stats[0]}, collisons = {stats[1]}, time taken = {stats[2]}")
 
-    # stats[0] = 0
-    # stats[1] = 0
-    # stats[2] = 0
+    stats[0] = 0
+    stats[1] = 0
+    stats[2] = 0
 
-    # for i in range(len(movies)):
-    #         #print(Hash1(movies[i].title))
-    #         start = datetime.now()
-    #         linked_List_addREV(movies[i].quote,quote_hash_table_ll,movies[i].title)
-    #         end = datetime.now()
-    # stats[2] = end-start
-    # for i in range(len(quote_hash_table_ll)):
-    #     if quote_hash_table_ll[i] == None:
-    #         stats[0] += 1
-    # print("quote as key")
-    # print(f"wasted space = {stats[0]}, collisons = {stats[1]}, time taken = {stats[2]}")
+    for i in range(len(movies)):
+            #print(Hash1(movies[i].title))
+            start = datetime.now()
+            linked_List_addREV(movies[i].quote,quote_hash_table_ll,movies[i].title)
+            end = datetime.now()
+    stats[2] = end-start
+    for i in range(len(quote_hash_table_ll)):
+        if quote_hash_table_ll[i] == None:
+            stats[0] += 1
+    print("quote as key")
+    print(f"wasted space = {stats[0]}, collisons = {stats[1]}, time taken = {stats[2]}")
 
 
 
