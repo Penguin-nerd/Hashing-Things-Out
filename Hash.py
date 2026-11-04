@@ -220,46 +220,46 @@ def main():
     title_hash_table_ll = []
     quote_hash_table_ll = []
 
-    # stats[0] = 0
-    # stats[1] = 0
-    # stats[2] = 0
+    stats[0] = 0
+    stats[1] = 0
+    stats[2] = 0
 
-    # for i in range(len(movies)):
-    #     title_hash_table_lp.append(None)
-    #     quote_hash_table_lp.append(None)
-    #     title_hash_table_ll.append(None)
-    #     quote_hash_table_ll.append(None)
+    for i in range(len(movies)):
+        title_hash_table_lp.append(None)
+        quote_hash_table_lp.append(None)
+        title_hash_table_ll.append(None)
+        quote_hash_table_ll.append(None)
 
-    # for i in range(len(movies)):
-    #     #print(Hash1(movies[i].title))
-    #     start = datetime.now()
-    #     linear_probe_addREV(movies[i].title,title_hash_table_lp,movies[i].quote)
-    #     end = datetime.now()
-    # stats[2] = end-start
-    # for i in range(len(title_hash_table_lp)):
-    #     if title_hash_table_lp[i] == None:
-    #         stats[0] += 1
-    # print("Third Hash table")
+    for i in range(len(movies)):
+        #print(Hash1(movies[i].title))
+        start = datetime.now()
+        linear_probe_addREV(movies[i].title,title_hash_table_lp,movies[i].quote)
+        end = datetime.now()
+    stats[2] = end-start
+    for i in range(len(title_hash_table_lp)):
+        if title_hash_table_lp[i] == None:
+            stats[0] += 1
+    print("Third Hash table")
 
-    # print("title as key")
-    # print(f"wasted space = {stats[0]}, collisons = {stats[1]}, time taken = {stats[2]}")
-    # stats[0] = 0
-    # stats[1] = 0
-    # stats[2] = 0
-    # for i in range(len(movies)):
-    #         #print(Hash1(movies[i].title))
-    #         start = datetime.now()
-    #         linear_probe_addREV(movies[i].quote,quote_hash_table_lp,movies[i].title)
-    #         end = datetime.now()
-    # for i in range(len(quote_hash_table_lp)):
-    #     if quote_hash_table_lp[i] == None:
-    #         stats[0] += 1
-    # stats[2] = end-start
-    # print("quote as key")
-    # print(f"wasted space = {stats[0]}, collisons = {stats[1]}, time taken = {stats[2]}")
-    # stats[0] = 0
-    # stats[1] = 0
-    # stats[2] = 0
+    print("title as key")
+    print(f"wasted space = {stats[0]}, collisons = {stats[1]}, time taken = {stats[2]}")
+    stats[0] = 0
+    stats[1] = 0
+    stats[2] = 0
+    for i in range(len(movies)):
+            #print(Hash1(movies[i].title))
+            start = datetime.now()
+            linear_probe_addREV(movies[i].quote,quote_hash_table_lp,movies[i].title)
+            end = datetime.now()
+    for i in range(len(quote_hash_table_lp)):
+        if quote_hash_table_lp[i] == None:
+            stats[0] += 1
+    stats[2] = end-start
+    print("quote as key")
+    print(f"wasted space = {stats[0]}, collisons = {stats[1]}, time taken = {stats[2]}")
+    stats[0] = 0
+    stats[1] = 0
+    stats[2] = 0
 
     # for i in range(len(movies)):
     #         #print(Hash1(movies[i].title))
